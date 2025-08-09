@@ -1,0 +1,80 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.header {
+    background-color: v.$negro;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+
+    &__logo {
+        width: 258px;
+        height: 207px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; 
+
+        img {
+            width: 258px;
+            height: 207px;
+            object-fit: contain;
+            display: block;
+            pointer-events: auto;
+            z-index: 1;
+        }
+    }
+
+    &__nav-login {
+        position: static; 
+        margin-top: 1rem; 
+        @include m.enlace;
+        margin-bottom: 1.5rem;
+
+        @include m.tablet {
+            white-space: nowrap;
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-top: 0; 
+        }
+    }
+}
+
+.navegacion {
+
+
+    &__contenedor {
+        background-color: lighten(v.$negro, 10%);
+        padding: 2rem;
+        padding: 1.4rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+
+
+        @include m.tablet {
+        position: relative;
+        z-index: 2;
+        background-color: lighten(v.$negro, 10%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 7rem;
+        padding: 1.4rem 0;
+    }
+    }
+
+   
+        &__enlace {
+            font-size: 1.8rem;
+            @include m.enlace;
+        }
+     
+}
+

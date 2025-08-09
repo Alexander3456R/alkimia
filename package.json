@@ -1,0 +1,36 @@
+{
+  "name": "alkimia-proyecto",
+  "version": "1.0.0",
+  "description": "Proyecto Alkimia - Boutique de moda con PHP-MVC, SCSS y JS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "keywords": [
+    "PHP-MVC",
+    "SCSS",
+    "JavaScript",
+    "Gulp",
+    "Sharp"
+  ],
+  "author": "Christopher Revelo",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.0",
+    "glob": "^11.0.3",
+    "gulp": "^5.0.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.5.6",
+    "sass": "^1.90.0",
+    "sharp": "^0.34.3",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "fancy-log": "^2.0.0"
+  }
+}
