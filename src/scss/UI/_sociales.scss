@@ -1,0 +1,42 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.menu-social {
+
+    @include m.menu-social(v.$blanco, 2rem);
+    display: block;
+    justify-items: center;
+    margin: 2rem 0 0 0;
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        margin: 2rem 3rem 0 0;
+        .menu-social__enlace:first-of-type {
+            margin-left: auto;
+        }
+    }
+
+    &__enlace {
+        padding: 1.7rem;
+        @include m.tablet {
+            padding: 0;
+        }
+    }
+
+    
+}
+
+    .texto-especial {
+        font-family: 'Oswald', sans-serif;
+        margin: 0 0 2rem 0;
+        font-size: 2rem;
+        font-weight: 600;
+        gap: 2rem;
+        @include m.tablet {
+            margin: 0 0 0 3rem;
+        }
+
+    }
+

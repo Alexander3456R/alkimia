@@ -1,0 +1,24 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer {
+    background-color: v.$negro;
+    color: v.$blanco; 
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+
+    &__copyright {
+        background-color: lighten(v.$negro, 10%);
+        margin: 2rem 0 0 0 ;
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: v.$black;
+
+        &--regular {
+            font-weight: v.$regular;
+        }
+    }
+}
