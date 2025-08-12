@@ -1,0 +1,81 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.nosotros {
+
+    &__grid {
+        @include m.contenedor;
+        @include m.grid(1, 3rem);
+        @include m.tablet {
+            @include m.grid(2, 5rem);
+            align-items: center;
+        }
+
+        img {
+            width: auto; // O el tamaño deseado
+            height: auto;
+            margin: 0 auto 2rem auto; // Centra y separa la imagen
+            display: block;
+        }
+    }
+
+    &__texto {
+        line-height: 2;
+    }
+}
+
+.comprar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__titulo {
+        color: v.$negro;
+        @include m.texto-fluido(2rem, 3rem);
+        text-transform: uppercase;
+        margin: 6rem 0 7rem 0;
+   
+    }
+
+    &__bloques {
+        @include m.grid(1, 4rem);
+        justify-content: center;
+        width: 75%;
+
+        @include m.tablet {
+            @include m.grid(3, 4rem);
+   
+        }
+    }
+    &__bloque {
+        @include m.card;
+        text-align: center;
+        
+    }
+
+    img {
+      width: 100px; // O el tamaño deseado
+      height: auto;
+      margin: 0 auto 2rem auto; // Centra y separa la imagen
+      display: block;
+    }
+
+    &__descripcion {
+        color: v.$negro;
+        font-size: 2.4rem;
+        font-weight: v.$bold;
+        text-transform: uppercase;
+        // max-width: 20ch; // Limita a 20 caracteres aprox.
+        margin: 0 auto;  // Centra horizontalmente
+        text-align: center;
+        white-space: normal;
+        p {
+            // max-width: 20ch; // Limita a 20 caracteres aprox.
+            margin: 0 auto;  // Centra horizontalmente
+            text-align: center;
+            white-space: normal;
+        }
+    }
+
+
+}

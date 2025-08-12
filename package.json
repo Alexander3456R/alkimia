@@ -31,6 +31,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "fancy-log": "^2.0.0"
   }
 }

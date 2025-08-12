@@ -8,11 +8,12 @@ use Controllers\PaginasController;
 
 $router = new Router();
 
-// Zona principal
+// Zona catalogo
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/nosotros', [PaginasController::class, 'nosotros']);
 $router->get('/catalogo', [PaginasController::class, 'catalogo']);
 $router->get('/contacto', [PaginasController::class, 'contacto']);
+$router->post('/contacto', [PaginasController::class, 'contacto']);
 
 
 // Login

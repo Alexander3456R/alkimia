@@ -8,7 +8,7 @@ class PaginasController {
     public static function index(Router $router) {
         
         $router->render('paginas/index', [
-            'titulo' => 'Principal'
+            'titulo' => 'catalogo'
         ]);
     }
 
@@ -27,9 +27,11 @@ class PaginasController {
     }
 
     public static function contacto(Router $router) {
-        
+        $alertas = [];
+
         $router->render('paginas/contacto', [
-            'titulo' => 'Contacto'
+            'titulo' => 'Contacto',
+            'alertas' => $alertas
         ]);
     }
 }

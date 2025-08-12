@@ -1,1 +1,1 @@
-import './camisas.js';
+import './formulario.js';
