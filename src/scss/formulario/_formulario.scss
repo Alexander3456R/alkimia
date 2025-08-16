@@ -2,8 +2,10 @@
 @use 'base/variables' as v;
 
 .formulario {
-    display: flex;
-    flex-direction: column;
+        @include m.shadow;
+        background-color: v.$blanco;
+        padding: 2rem;
+        border-radius: 1rem;
     &__texto {
         font-size: 1.4rem;
         color: v.$gris-oscuro;
@@ -20,6 +22,13 @@
         display: block;
         font-size: 1.8rem;
         color: rgba(v.$negro, .8);
+    }
+
+     &__campo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1.5rem 0;
     }
 
     &__input,
@@ -52,16 +61,17 @@
         display: flex;
         gap: 2rem;
     }
-}
-.boton {
-    display: flex;
-    justify-content: center;
     
-
-    &__enviar {
+    &__submit {
         @include m.boton(lighten(v.$gris-oscuro, 20%), v.$blanco);
-        width: 30%;
+        width: 100%;
         margin-top: 2rem;
+        @include m.tablet {
+            width: auto;
+        }
         border-radius: .5rem;
     }
+
 }
+
+

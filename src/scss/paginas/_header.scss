@@ -45,10 +45,35 @@
     }
 }
 
+.mobile-menu {
+    display: flex;
+    justify-content: center;
+    background-color: lighten(v.$negro, 10%);
+    cursor: pointer;
+    @include m.tablet {
+        display: none;
+    }
+    img {
+        width: 5rem;
+    }
+}
+
+
+
 .navegacion {
 
-
     &__contenedor {
+
+        &--mostrar {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        }
+        
+        height: 0;
+        opacity: 0;
+        transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
+        visibility: hidden;
         background-color: lighten(v.$negro, 10%);
         padding: 2rem;
         padding: 0;
@@ -63,6 +88,9 @@
             text-align: center;
         }
         @include m.tablet {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
         position: relative;
         z-index: 2;
         background-color: lighten(v.$negro, 10%);
@@ -81,6 +109,10 @@
         &__enlace {
             font-size: 1.8rem;
             @include m.enlace;
+
+            &--actual {
+            color: v.$azul;
+        }
         }
      
 }

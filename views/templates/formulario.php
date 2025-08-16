@@ -38,5 +38,5 @@
 </fieldset>
 
 <div class="boton">
-    <input type="submit" value="Enviar" class="boton__enviar">
+    <input type="submit" value="Enviar" class="formulario__submit">
 </div>

@@ -186,7 +186,5 @@
                 </a>
                 </div>
             </div> <!-- Fin clase producto -->
-            <div <?php echo aos_animation(); ?> class="grafico grafico--camisas"></div>
-            <div <?php echo aos_animation(); ?> class="grafico grafico--node"></div>
         </div>
     </main>

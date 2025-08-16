@@ -4,16 +4,11 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\AuthController;
+use Controllers\DashboardController;
 use Controllers\PaginasController;
 
 $router = new Router();
 
-// Zona catalogo
-$router->get('/', [PaginasController::class, 'index']);
-$router->get('/nosotros', [PaginasController::class, 'nosotros']);
-$router->get('/catalogo', [PaginasController::class, 'catalogo']);
-$router->get('/contacto', [PaginasController::class, 'contacto']);
-$router->post('/contacto', [PaginasController::class, 'contacto']);
 
 
 // Login
@@ -37,5 +32,17 @@ $router->post('/reestablecer', [AuthController::class, 'reestablecer']);
 $router->get('/mensaje', [AuthController::class, 'mensaje']);
 $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 
+// Zona de administracion
+
+$router->get('/admin/dashboard', [DashboardController::class, 'index']);
+
+
+
+// Zona catalogo
+$router->get('/', [PaginasController::class, 'index']);
+$router->get('/nosotros', [PaginasController::class, 'nosotros']);
+$router->get('/catalogo', [PaginasController::class, 'catalogo']);
+$router->get('/contacto', [PaginasController::class, 'contacto']);
+$router->post('/contacto', [PaginasController::class, 'contacto']);
 
 $router->comprobarRutas();
