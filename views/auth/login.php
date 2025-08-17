@@ -30,7 +30,6 @@
             
             />
         </div>
-
         <input type="submit" class="formulario__submit" value="Iniciar Sesión">
     </form>
 

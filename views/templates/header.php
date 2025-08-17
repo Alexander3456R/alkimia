@@ -6,7 +6,7 @@
         <?php if(is_admin()) { ?>
                 <a class="header__nav-login" href="/admin/dashboard">Administrar</a>
             <?php } else { ?>
-                <a class="header__nav-login" href="/login">Iniciar Sesión</a>
+                <a class="header__nav-login <?php echo  pagina_actual('/login') ? 'header__nav-login--actual' : ''; ?>" href="/login">Iniciar Sesión</a>
         <?php } ?>
     </nav>
 </header>

@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body class="dashboard">
+
+<?php if($titulo === 'Panel de Administración') : ?>
+    <div id="splash-screen">
+        <div class="splash-logo-container">
+            <img src="/build/img/alkimia.png" alt="Alkimia Logo" id="splash-logo">
+            <div id="tsparticles" style="width: 250px; height: 250px;"></div>
+        </div>
+    </div>
+<?php endif; ?>
         <?php 
             include_once __DIR__ .'/templates/admin-header.php';
         ?>
@@ -27,6 +36,7 @@
         </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
     <script src="/build/js/main.min.js" defer></script>
 </body>
 </html>

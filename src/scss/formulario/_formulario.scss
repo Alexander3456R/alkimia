@@ -12,6 +12,10 @@
         margin: 0 0 2rem 0;
     }
 
+    &__fieldset {
+        border: none;
+    }
+
     &__legend {
         color: v.$gris;
         font-size: 2.2rem;
@@ -65,7 +69,7 @@
     &__submit {
         @include m.boton(lighten(v.$gris-oscuro, 20%), v.$blanco);
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 1rem;
         @include m.tablet {
             width: auto;
         }

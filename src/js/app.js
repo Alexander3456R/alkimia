@@ -1,2 +1,2 @@
-import './formulario.js';
 import './menu.js';
+import './splash.js';

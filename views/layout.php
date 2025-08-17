@@ -17,6 +17,16 @@
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="" defer></script>
 </head>
 <body>
+
+<?php if($titulo === 'Principal') : ?>
+<div id="splash-screen">
+    <div class="splash-logo-container">
+        <img src="/build/img/alkimia.png" alt="Alkimia Logo" id="splash-logo">
+        <div id="tsparticles" style="width: 250px; height: 250px;"></div>
+    </div>
+</div>
+<?php endif; ?>
+
     <?php 
         include_once __DIR__ .'/templates/header.php';
         echo $contenido;
@@ -36,7 +46,9 @@
             AOS.refresh();
             }, 500);
         });
-    </script>
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
     <script src="/build/js/main.min.js" defer></script>
 </body>
 </html>

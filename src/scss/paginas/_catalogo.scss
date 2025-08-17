@@ -2,8 +2,12 @@
 @use 'base/variables' as v;
 
 .catalogo {
-    max-width: 120rem;
-    margin: 0 auto;
+    @include m.contenedor-sm;
+    
+    @include m.tablet {
+        @include m.contenedor;
+        margin: 0 auto;
+    }
 
     &__grid {
         @include m.grid(1, 2rem);

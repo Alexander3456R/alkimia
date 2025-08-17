@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "fancy-log": "^2.0.0"
+    "fancy-log": "^2.0.0",
+    "sweetalert2": "^11.22.4"
   }
 }
