@@ -5,6 +5,7 @@ require_once __DIR__ . '/../includes/app.php';
 use MVC\Router;
 use Controllers\AuthController;
 use Controllers\DashboardController;
+use Controllers\MensajesController;
 use Controllers\PaginasController;
 
 $router = new Router();
@@ -35,6 +36,10 @@ $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 // Zona de administracion
 
 $router->get('/admin/dashboard', [DashboardController::class, 'index']);
+$router->get('/admin/mensajes', [MensajesController::class, 'index']);
+$router->post('/admin/mensajes/eliminar', [MensajesController::class, 'eliminar']);// Protegida
+
+
 
 
 

@@ -41,6 +41,7 @@
                         placeholder="Tu Teléfono"
                         id="telefono"
                         name="telefono"
+                        maxlength="10"
                         value="<?php echo $contacto->telefono; ?>"
 
                     
@@ -55,7 +56,9 @@
                         name="mensaje"
                         placeholder="Escriba la razón por la cual ser contactado"
                         rows="8"
+                        maxlength="300"
                     ><?php echo $contacto->mensaje; ?></textarea>
+                    <p id="mensaje-contador" class="formulario__label">300 caracteres restantes</p>
                 </div>
         <input type="submit" class="formulario__submit" value="Enviar">
         </form>

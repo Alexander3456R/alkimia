@@ -7,21 +7,13 @@
             </span>
         </a>
 
-        <a href="/admin/expositores" class="dashboard__enlace <?php echo pagina_actual('/expositores') ? 'dashboard__enlace--actual' : ''; ?>">
-            <i class="fa-solid fa-microphone dashboard__icono"></i>
+
+        <a href="/admin/registrados" class="dashboard__enlace <?php echo pagina_actual('/registrados') ? 'dashboard__enlace--actual' : ''; ?>">
+           <i class="fa-solid fa-warehouse dashboard__icono"></i>
             <span class="dashboard__menu-texto">
-                Expositores
+                Inventario
             </span>
         </a>
-
-
-        <a href="/admin/eventos" class="dashboard__enlace <?php echo pagina_actual('/eventos') ? 'dashboard__enlace--actual' : ''; ?>">
-           <i class="fa-solid fa-calendar-days dashboard__icono"></i>
-            <span class="dashboard__menu-texto">
-                Eventos
-            </span>
-        </a>
-
 
         <a href="/admin/registrados" class="dashboard__enlace <?php echo pagina_actual('/registrados') ? 'dashboard__enlace--actual' : ''; ?>">
            <i class="fa-solid fa-users dashboard__icono"></i>
@@ -31,10 +23,10 @@
         </a>
 
 
-        <a href="/admin/regalos" class="dashboard__enlace <?php echo pagina_actual('/regalos') ? 'dashboard__enlace--actual' : ''; ?>">
-           <i class="fa-solid fa-gift dashboard__icono"></i>
+        <a href="/admin/mensajes" class="dashboard__enlace <?php echo pagina_actual('/regalos') ? 'dashboard__enlace--actual' : ''; ?>">
+           <i class="fa-solid fa-sms dashboard__icono"></i>
             <span class="dashboard__menu-texto">
-                Regalos
+                Mensajes
             </span>
         </a>
     </nav>

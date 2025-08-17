@@ -16,7 +16,4 @@ class DashboardController {
                 'titulo' => 'Panel de Administración'
             ]);
     }
-
-
-
 }
