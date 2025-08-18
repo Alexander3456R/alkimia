@@ -7,6 +7,7 @@
             <table class="table">
                 <thead class="table__thead">
                     <tr>
+                        <th scope="col" class="table__th">Fecha</th>
                         <th scope="col" class="table__th">Nombre</th>
                         <th scope="col" class="table__th">Apellido</th>
                         <th scope="col" class="table__th">Teléfono</th>
@@ -18,6 +19,7 @@
                <tbody class="table__tbody">
                 <?php foreach($mensajes as $mensaje) { ?>
                         <tr class="table__tr">
+                            <td class="table__td"><?php echo date('d/m/Y | H:i:s', strtotime($mensaje->fecha)); ?></td>
                             <td class="table__td"><?php echo $mensaje->nombre; ?></td>
                             <td class="table__td"><?php echo $mensaje->apellido; ?></td>
                             <td class="table__td"><?php echo $mensaje->telefono; ?></td>

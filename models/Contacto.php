@@ -12,6 +12,7 @@ class Contacto extends ActiveRecord {
     public $apellido;
     public $telefono;
     public $mensaje;
+    public $fecha;
 
     public function __construct($args = [])
     {
@@ -20,6 +21,8 @@ class Contacto extends ActiveRecord {
         $this->apellido = $args['apellido'] ?? '';
         $this->telefono = $args['telefono'] ?? '';
         $this->mensaje = $args['mensaje'] ?? '';
+        $this->fecha = $args['fecha'] ?? '';
+
     }
 
 

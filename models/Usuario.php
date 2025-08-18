@@ -15,6 +15,7 @@ class Usuario extends ActiveRecord {
     public $confirmado;
     public $token;
     public $admin;
+    public $fecha_registro;
 
     public $password_actual;
     public $password_nuevo;
@@ -31,6 +32,7 @@ class Usuario extends ActiveRecord {
         $this->confirmado = $args['confirmado'] ?? 0;
         $this->token = $args['token'] ?? '';
         $this->admin = $args['admin'] ?? 0;
+        $this->fecha_registro = $args['fecha_registro'] ?? '';
     }
 
     // Validar el Login de Usuarios

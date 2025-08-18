@@ -7,6 +7,7 @@ use Controllers\AuthController;
 use Controllers\DashboardController;
 use Controllers\MensajesController;
 use Controllers\PaginasController;
+use Controllers\RegistradosController;
 
 $router = new Router();
 
@@ -38,6 +39,8 @@ $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 $router->get('/admin/dashboard', [DashboardController::class, 'index']);
 $router->get('/admin/mensajes', [MensajesController::class, 'index']);
 $router->post('/admin/mensajes/eliminar', [MensajesController::class, 'eliminar']);// Protegida
+$router->get('/admin/registrados', [RegistradosController::class, 'index']);// Protegida
+
 
 
 
