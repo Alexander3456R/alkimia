@@ -8,17 +8,18 @@
         </a>
 
 
-        <a href="/admin/inventario" class="dashboard__enlace <?php echo pagina_actual('/inventario') ? 'dashboard__enlace--actual' : ''; ?>">
-           <i class="fa-solid fa-warehouse dashboard__icono"></i>
-            <span class="dashboard__menu-texto">
-                Inventario
-            </span>
-        </a>
-
         <a href="/admin/registrados" class="dashboard__enlace <?php echo pagina_actual('/registrados') ? 'dashboard__enlace--actual' : ''; ?>">
            <i class="fa-solid fa-users dashboard__icono"></i>
             <span class="dashboard__menu-texto">
                 Registrados
+            </span>
+        </a>
+        
+
+        <a href="/admin/inventario" class="dashboard__enlace <?php echo pagina_actual('/inventario') ? 'dashboard__enlace--actual' : ''; ?>">
+           <i class="fa-solid fa-warehouse dashboard__icono"></i>
+            <span class="dashboard__menu-texto">
+                Inventario
             </span>
         </a>
 

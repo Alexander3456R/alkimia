@@ -39,5 +39,7 @@ class Contacto extends ActiveRecord {
         if(!$this->mensaje) {
             self::$alertas['error'][] = 'El Campo Mensaje es Obligatorio';
         }
+
+        return self::$alertas;
     }
 }

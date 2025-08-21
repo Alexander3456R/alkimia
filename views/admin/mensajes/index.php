@@ -40,55 +40,12 @@
             </table>
         </div>                
     <?php } else { ?>
-        <p class="text-center">No Hay Registros Aún</p>
+        <p class="text-center">No Hay Ningun Mensaje Aún</p>
 
     <?php } ?>
-</div>
 
 <?php 
     echo $paginacion;
 ?>
+</div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const formulariosEliminar = document.querySelectorAll('.eliminar-mensaje');
-
-    formulariosEliminar.forEach(formulario => {
-        formulario.addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita el envío inmediato
-
-            Swal.fire({
-                title: '¿Estás seguro?',
-                text: "¡No podrás revertir esta acción!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Sí, eliminar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Enviar formulario
-                    fetch(formulario.action, {
-                        method: 'POST',
-                        body: new FormData(formulario)
-                    }).then(response => {
-                        // Mostrar mensaje de éxito
-                        Swal.fire({
-                            title: 'Mensaje eliminado',
-                            icon: 'success',
-                            confirmButtonText: 'Aceptar'
-                        }).then(() => {
-                            // Recargar página después de cerrar el alert
-                            window.location.reload();
-                        });
-                    }).catch(error => {
-                        console.error('Error al eliminar:', error);
-                    });
-                }
-            });
-        });
-    });
-});
-
-</script>

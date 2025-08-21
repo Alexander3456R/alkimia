@@ -5,6 +5,7 @@ require_once __DIR__ . '/../includes/app.php';
 use MVC\Router;
 use Controllers\AuthController;
 use Controllers\DashboardController;
+use Controllers\InventarioController;
 use Controllers\MensajesController;
 use Controllers\PaginasController;
 use Controllers\RegistradosController;
@@ -40,6 +41,12 @@ $router->get('/admin/dashboard', [DashboardController::class, 'index']);
 $router->get('/admin/mensajes', [MensajesController::class, 'index']);
 $router->post('/admin/mensajes/eliminar', [MensajesController::class, 'eliminar']);// Protegida
 $router->get('/admin/registrados', [RegistradosController::class, 'index']);// Protegida
+$router->get('/admin/inventario', [InventarioController::class, 'index']);// Protegida
+$router->get('/admin/inventario/crear', [InventarioController::class, 'crear']);// Protegida
+$router->post('/admin/inventario/crear', [InventarioController::class, 'crear']);// Protegida
+$router->get('/admin/inventario/editar', [InventarioController::class, 'editar']);// Protegida
+$router->post('/admin/inventario/editar', [InventarioController::class, 'editar']);// Protegida
+$router->post('/admin/inventario/eliminar', [InventarioController::class, 'eliminar']);// Protegida
 
 
 

@@ -4,7 +4,7 @@
 
         <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
 
-            <form class="formulario" action="/contacto" method="POST">
+            <form class="formulario" id="form-contacto" action="/contacto" method="POST" data-exito="<?php echo $exito ? '1' : '0'; ?>">
                 <div class="formulario__campo">
                     <label for="nombre" class="formulario__label">Nombre</label>
                     <input
@@ -63,19 +63,3 @@
         <input type="submit" class="formulario__submit" value="Enviar">
         </form>
     </main>
-
-<?php if($exito): ?>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    Swal.fire({
-        title: 'Mensaje enviado',
-        text: 'Tu mensaje fue enviado correctamente',
-        icon: 'success',
-        confirmButtonText: 'Aceptar',
-        timerProgressBar: true
-    }).then(() => {
-        window.location.href = "/";
-    });
-});
-</script>
-<?php endif; ?>
