@@ -27,17 +27,17 @@ class Email {
          $mail->Port = $_ENV['EMAIL_PORT'];
          $mail->Username = $_ENV['EMAIL_USER'];
          $mail->Password = $_ENV['EMAIL_PASS'];
-     
-         $mail->setFrom('cuentas@devwebcamp.com');
-         $mail->addAddress($this->email, $this->nombre);
-         $mail->Subject = 'Confirma tu Cuenta';
+
+        $mail->setFrom('cuentas@alkimia.com');
+        $mail->addAddress('cuentas@alkimia.com', 'Alkimia Fashion Boutique');
+        $mail->Subject = 'Confirma tu Cuenta';
 
          // Set HTML
          $mail->isHTML(TRUE);
          $mail->CharSet = 'UTF-8';
 
          $contenido = '<html>';
-         $contenido .= "<p><strong>Hola " . $this->nombre .  "</strong>, has Registrado Correctamente tu cuenta en TechVerse; pero es necesario confirmarla</p>";
+         $contenido .= "<p><strong>Hola " . $this->nombre .  "</strong>, has Registrado Correctamente tu cuenta en Alkimia Fashion Boutique; pero es necesario confirmarla</p>";
          $contenido .= "<p>Presiona aquí: <a href='" . $_ENV['HOST'] . "/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta</a>";       
          $contenido .= "<p>Si tu no creaste esta cuenta; puedes ignorar el mensaje</p>";
          $contenido .= '</html>';
@@ -59,8 +59,8 @@ class Email {
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
     
-        $mail->setFrom('cuentas@devwebcamp.com');
-        $mail->addAddress($this->email, $this->nombre);
+        $mail->setFrom('cuentas@alkimia.com');
+        $mail->addAddress('cuentas@alkimia.com', 'Alkimia Fashion Boutique');
         $mail->Subject = 'Reestablece tu password';
 
         // Set HTML

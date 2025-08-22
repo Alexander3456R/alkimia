@@ -22,15 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                     .then(res => res.json())
                     .then(data => {
-                        if (data.resultado) {
-                            Swal.fire('Eliminado!', 'Acción completada.', 'success');
-                            const fila = form.closest('tr');
-                            fila.classList.add('animate__animated', 'animate__fadeOut');
-                            setTimeout(() => fila.remove(), 500);
-                        } else {
-                            Swal.fire('Error', data.error || 'No se pudo eliminar.', 'error');
-                        }
-                    })
+                    if (data.resultado) {
+                        Swal.fire('Eliminado!', 'Acción completada.', 'success').then(() => {
+                            // 🔥 Recargar la página solo después de cerrar el SweetAlert
+                            window.location.reload();
+                        });
+                    } else {
+                        Swal.fire('Error', data.error || 'No se pudo eliminar.', 'error');
+                    }
+                })
+
                     .catch(() => Swal.fire('Error', 'Hubo un problema con la petición.', 'error'));
                 }
             });

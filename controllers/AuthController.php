@@ -166,6 +166,8 @@ class AuthController {
 
         $token_valido = true;
 
+        $exito = false;
+
         if(!$token) header('Location: /');
 
         // Identificar el usuario con este token
@@ -197,7 +199,7 @@ class AuthController {
 
                 // Redireccionar
                 if($resultado) {
-                    header('Location: /login');
+                    $exito = true;
                 }
             }
         }
@@ -208,7 +210,8 @@ class AuthController {
         $router->render('auth/reestablecer', [
             'titulo' => 'Reestablecer Contraseña',
             'alertas' => $alertas,
-            'token_valido' => $token_valido
+            'token_valido' => $token_valido,
+            'exito' => $exito
         ]);
     }
 

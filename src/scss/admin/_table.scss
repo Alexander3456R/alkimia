@@ -23,7 +23,7 @@
 
     &__th {
         padding: 1rem;
-        text-align: left;
+        text-align: center;
     }
 
     &__tr {
@@ -34,11 +34,12 @@
 
     &__td {
         padding: 1.5rem 1rem;
+        text-align: center;
 
         &--acciones {
             @extend .table__td;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             gap: 2rem;
             align-items: center;
         }
@@ -61,5 +62,12 @@
         &:hover {
             cursor: pointer;
         }
+    }
+
+    &__imagen {
+        width: 80px;
+        height: auto;
+        border-radius: 5px;
+        object-fit: cover;
     }
 }

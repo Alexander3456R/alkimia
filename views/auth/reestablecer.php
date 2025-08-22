@@ -27,3 +27,17 @@
         <a href="/registro" class="acciones__enlace">¿Aún no tienes una cuenta? Crea una!</a>
     </div>
 </main>
+
+<?php if($exito) : ?>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    Swal.fire({
+        title: '¡Contraseña cambiada exitosamente!',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    }).then(() => {
+        window.location.href = '/login'; // Redirige al login
+    });
+});
+</script>
+<?php endif; ?>

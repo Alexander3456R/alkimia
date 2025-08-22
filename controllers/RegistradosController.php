@@ -21,8 +21,9 @@ class RegistradosController {
             header('Location: /admin/registrados?page=1');
         }
 
-        $registros_por_pagina = 2;
+        $registros_por_pagina = 4;
         $total = Usuario::total();
+
         $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
 
         if($paginacion->total_paginas() < $pagina_actual) {

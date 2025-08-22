@@ -37,16 +37,19 @@
     &__precio {
         font-weight: v.$bold;
         text-transform: uppercase;
+        text-align: center;
     }
 
     &__nombre {
         font-size: 3.2rem;
-        @include m.texto-degradado(#2e2e2e, #6e6e6e);
+        @include m.texto-degradado(#6e6e6e, #2e2e2e);
+
     }
 
     &__precio {
         font-size: 3rem;
         @include m.texto-degradado(#9c7a3f, #e0c27b);
+
     }
 
 
